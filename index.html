@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="script" href="script.js">
+
+    <meta charset="utf-8">
+
+
+</head>
+
+
+
+<body>
+
+
+    <section>
+
+        <div class="sword">
+
+            <div class="light"></div>
+
+        </div>
+
+
+    </section>
+
+    <div class="wrapper">
+
+        <header class="wrapper-header">
+
+            <h1>Hello</h1>
+
+            <h3 class="wrapper-p"></h3>
+
+        </header>
+
+
+
+
+    </div>
+
+    <div class="border-div"></div>
+
+    <div class="wrapper2">
+
+        <article>
+
+            <div class="article-section-box">
+
+                <section class="article-foto-box">
+
+                    <img src="foto3.jpg">
+
+                </section>
+
+
+
+                <section class="article-section-2">
+
+                    <h2>Programming</h2>
+
+                    <p>HTML5, CSS3, Javascript.</p>
+                    <p>I'm a self-learning beginner programmer and I still study web development.</p>
+
+                    <h2>School</h2>
+
+                    <p>I started studies in 2019 at <span class="section-2-span">WSB Bydgoszcz</span> and graduated in
+                        2022.
+                    </p>
+
+
+
+
+
+                    <h2>Experience</h2>
+
+                    <p>I used to work in a <span class="section-2-span">casino.</span> Now I work as a full time <span
+                            class="section-2-span">CNC lathe programmer/operator.</span></p>
+
+
+
+
+
+                    <h2>Free time</h2>
+
+                    <p>I spend most of my free time at home watching movies and learning how to code.</p>
+                    <p>I also love to <span class="section-2-span">play video games</span> and eat something good.</p>
+                    <p>Sometimes I even <span class="section-2-span">read</span> a book.</p>
+
+                </section>
+
+            </div>
+
+            <section class="article-section-3">
+
+                <button class="article-button-1">My cosmos project</button>
+                <button class="article-button-2">My shop project</button>
+
+            </section>
+
+            <section class="contact">
+
+                <h2>Contact me</h2>
+
+                <p>692 371 275</p>
+                <p>mikulskimateusz422@gmail.com</p>
+
+            </section>
+
+        </article>
+
+        <div class="wrapper3"></div>
+
+    </div>
+
+
+
+
+    <script>
+
+        let sword = document.querySelector('.sword');
+        let light = document.querySelector('.light');
+        let wrapperP = document.querySelector('.wrapper-p');
+        let wrapper3 = document.querySelector('.wrapper3');
+
+        let wrapperTitleLetters = ['_', ' ', '_', ' ', 'M', 'y', ' ', 'n', 'a', 'm', 'e', ' ', 'i', 's', ' ', 'M', 'a', 't', 'e', 'u', 's', 'z', '.', ' ', 'I', ' ', 'a', 'm', ' ', 'l', 'o', 'o', 'k', 'i', 'n', 'g', ' ', 'f', 'o', 'r', ' ', 'm', 'y', ' ', 'f', 'i', 'r', 's', 't', ' ', 'j', 'o', 'b', '.', ' ', 'M', 'y', ' ', 'C', 'V', ' ', 'i', 's', ' ', 'r', 'i', 'g', 'h', 't', ' ', 'b', 'e', 'l', 'o', 'w', '.'];
+
+        let wrapperTitleLetters2 = ['_', ' ', '_', ' '];
+
+        let i = -1;
+
+        function loop() {
+
+            i++;
+
+            if (i < 5) {
+
+                wrapperP.innerHTML = wrapperTitleLetters[i];
+
+            }
+
+            if (i > 4 && i <= 75) {
+
+                wrapperP.innerHTML = wrapperP.innerHTML + wrapperTitleLetters[i];
+
+            }
+
+            if (i >= 75) {
+
+                clearInterval(intervalLetters);
+
+            }
+
+
+
+        };
+
+        let intervalLetters = loop;
+
+        setTimeout(() => {
+
+            setInterval(loop, 30);
+
+        }, 500);
+
+
+
+
+
+        function changeAnimation1() {
+
+            sword.style.animation = 'moveLightsaber1 1s forwards';
+
+
+        }
+
+        function changeAnimation3() {
+
+            sword.style.animation = 'moveLightsaber3 2s forwards';
+            light.style.animation = 'moveLightsaber6 2s forwards'
+
+        }
+
+        function changeAnimation4() {
+
+            sword.style.animation = 'moveLightsaber4 2s forwards';
+            light.style.animation = 'moveLightsaber5 1s forwards';
+
+        }
+
+        function changeAnimation5() {
+
+            light.style.animation = 'lightsaber 0.1s 0.3s infinite';
+
+        }
+
+        function changeAnimation6() {
+
+            wrapper3.style.display = 'none';
+
+        }
+
+
+
+
+        setTimeout(changeAnimation1, 1150);
+        setTimeout(changeAnimation3, 2000);
+        setTimeout(changeAnimation4, 4000);
+        setTimeout(changeAnimation5, 5000);
+        setTimeout(changeAnimation6, 5000);
+
+
+    </script>
+
+
+</body>
+
+</html>
